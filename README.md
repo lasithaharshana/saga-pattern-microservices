@@ -16,7 +16,7 @@ Simple order flow to demo some concepts:
 
 ## Prerequisites
 
-- `Java 21`
+- `Java 17`
 - `Docker`
 - `Docker-compose`
 
@@ -39,7 +39,7 @@ export PLATFORM=linux/arm64 && docker-compose up -d
 ### Build projects
 
 ```shell
-./mvnw clean package -DskipTests=true
+mvn clean package -DskipTests=true
 ```
 
 ### Start Services
@@ -47,19 +47,19 @@ export PLATFORM=linux/arm64 && docker-compose up -d
 Run services `api-gateway`, `order-service`, `customer-service`, `inventory-service`
 
 ```shell
-./mvnw -f api-gateway/pom.xml spring-boot:run
+mvn -f api-gateway/pom.xml spring-boot:run
 ```
 
 ```shell
-./mvnw -f order-service/pom.xml spring-boot:run
+mvn -f order-service/pom.xml spring-boot:run
 ```
 
 ```shell
-./mvnw -f customer-service/pom.xml spring-boot:run
+mvn -f customer-service/pom.xml spring-boot:run
 ```
 
 ```shell
-./mvnw -f inventory-service/pom.xml spring-boot:run
+mvn -f inventory-service/pom.xml spring-boot:run
 ```
 
 | Service's name    | Endpoint       |
